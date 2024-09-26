@@ -1,3 +1,5 @@
+import { Plot } from "@observablehq/plot";
+
 interface CryptoData {
   Date: string;
   Bitcoin: string;
@@ -6,8 +8,8 @@ interface CryptoData {
   USDC: string;
 }
 
-const Plot = ({ data }: { data: CryptoData[] }) => {
+const PlotComponent = ({ data }: { data: CryptoData[] }) => {
   return <div>Plot {data.length}</div>;
 };
 
-export default Plot;
+export default PlotComponent;

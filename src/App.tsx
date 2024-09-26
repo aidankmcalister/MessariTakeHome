@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import * as d3 from "d3";
-import Plot from "./components/Plot";
+import PlotComponent from "./components/PlotComponent";
 
 function App() {
   const [data, setData] = useState([]);
@@ -11,7 +11,7 @@ function App() {
   return (
     <section>
       <h1 className="text-3xl font-bold underline">Messari Take Home Test</h1>
-      <Plot data={data} />{" "}
+      <PlotComponent data={data} />{" "}
     </section>
   );
 }
