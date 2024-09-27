@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
 import "./App.css";
-import * as d3 from "d3";
 import PlotComponent from "./components/PlotComponent";
 
 function App() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    d3.csv("./assets/messariData.csv").then(setData);
-  }, []);
   return (
-    <section>
-      <h1 className="text-3xl font-bold underline">Messari Take Home Test</h1>
-      <PlotComponent data={data} />{" "}
+    <section className="flex flex-col items-center justify-center h-screen text-neutral-200 bg-[#14191D]">
+      <h1 className="text-3xl font-bold">Messari Take Home Test</h1>
+      <h1 className="text-lg mb-10">Aidan McAlister</h1>
+      <PlotComponent />
+      <p className="text-xs italic mt-10 opacity-80">
+        The data presented may not be entirely accurate. In a professional
+        setting, I would get clarification and ensure I have a proper
+        understanding of what each number represents.
+      </p>
     </section>
   );
 }
